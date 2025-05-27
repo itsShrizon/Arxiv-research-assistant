@@ -1,4 +1,4 @@
-# arxiv-mcp-server
+# Arxiv-research-assistant
 
 A unified platform for exploring, analyzing, and interacting with arXiv research papers using a modern web UI and backend server.
 
