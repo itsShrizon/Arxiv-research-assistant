@@ -11,26 +11,22 @@ A unified platform for exploring, analyzing, and interacting with arXiv research
 
 ## Quick Start
 
-1. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-````
+1.  **Install dependencies**
+    ```powershell
+    pip install -r requirements.txt
+    ```
 
-2. **Run both backend and UI**
+2.  **Run both backend and UI**
+    ```powershell
+    python src/arxiv_mcp_server/ui/start_services.py
+    ```
+    - Backend: http://localhost:8000
+    - UI: http://localhost:8501
 
-   ```bash
-   python src/arxiv_mcp_server/ui/start_services.py
-   ```
-
-   * Backend: [http://localhost:8000](http://localhost:8000)
-   * UI: [http://localhost:8501](http://localhost:8501)
-
-3. **Stop services**
-   Press `Ctrl+C` in the terminal to stop both backend and UI.
+3.  **Stop services**
+    Press `Ctrl+C` in the terminal to stop both backend and UI.
 
 ## Project Structure
-
-```
 project-root/
 ├── README.md
 ├── requirements.txt
@@ -94,17 +90,13 @@ project-root/
 
 ## Demo Video
 
-[![Watch the demo](https://img.youtube.com/vi/zdRTSI6OW_Q/0.jpg)](https://www.youtube.com/watch?v=zdRTSI6OW_Q)
+[![Project Demo](https://img.youtube.com/vi/zdRTSI6OW_Q/hqdefault.jpg)](https://youtu.be/zdRTSI6OW_Q)
 
-> **Note:** Make sure the video is publicly accessible on YouTube.
+> Click the image above to watch the project demo on YouTube.
 
 ## Customization
-
-* Add your own LLM API keys and configuration in `src/arxiv_mcp_server/config.py`.
-* Place downloaded papers in `data/papers/`.
+- Add your own LLM API keys and configuration in `src/arxiv_mcp_server/config.py`.
+- Place downloaded papers in `data/papers/`.
 
 ## License
-
 MIT License
-
-
