@@ -11,22 +11,24 @@ A unified platform for exploring, analyzing, and interacting with arXiv research
 
 ## Quick Start
 
-1.  **Install dependencies**
-    ```powershell
-    pip install -r requirements.txt
-    ```
+1. **Install dependencies**
+   ```powershell
+   pip install -r requirements.txt
+   ```
 
-2.  **Run both backend and UI**
-    ```powershell
-    python src/arxiv_mcp_server/ui/start_services.py
-    ```
-    - Backend: http://localhost:8000
-    - UI: http://localhost:8501
+2. **Run both backend and UI**
+   ```powershell
+   python src/arxiv_mcp_server/ui/start_services.py
+   ```
+   - Backend: http://localhost:8000
+   - UI: http://localhost:8501
 
-3.  **Stop services**
-    Press `Ctrl+C` in the terminal to stop both backend and UI.
+3. **Stop services**
+   Press `Ctrl+C` in the terminal to stop both backend and UI.
 
 ## Project Structure
+
+```
 project-root/
 ├── README.md
 ├── requirements.txt
@@ -90,9 +92,9 @@ project-root/
 
 ## Demo Video
 
-[![Project Demo](https://img.youtube.com/vi/zdRTSI6OW_Q/hqdefault.jpg)](https://youtu.be/zdRTSI6OW_Q)
+[![Project Demo](https://img.youtube.com/vi/zdRTSI6OW_Q/maxresdefault.jpg)](https://youtu.be/zdRTSI6OW_Q)
 
-> Click the image above to watch the project demo on YouTube.
+> **Note:** Click the thumbnail above to watch the demo video on YouTube.
 
 ## Customization
 - Add your own LLM API keys and configuration in `src/arxiv_mcp_server/config.py`.
