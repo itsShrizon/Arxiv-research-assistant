@@ -1,39 +1,113 @@
+Here is the full **Markdown code** you can copy and paste into your `README.md` file:
 
----
+````markdown
+# arxiv-mcp-server
 
-## 🎥 Demo Video
+A unified platform for exploring, analyzing, and interacting with arXiv research papers using a modern web UI and backend server.
 
-See `arxiv-mcp-server` in action! This short video provides a walkthrough of the main features and functionalities.
+## Features
+- **Backend API**: Serves arXiv paper data, search, and LLM-powered analysis endpoints
+- **Modern UI**: Streamlit app for searching, reading, and analyzing arXiv papers
+- **LLM Integration**: Deep research analysis and summarization using language models
+- **Paper Management**: Download, list, and read papers in PDF or Markdown
+- **History & Relevance**: Track search history and relevance scoring
 
----
+## Quick Start
 
-### **Important Note on Video Display in READMEs:**
+1. **Install dependencies**
+   ```bash
+   pip install -r requirements.txt
+````
 
-GitHub Markdown (and most standard Markdown renderers) **does not natively support embedding video players or displaying video *previews* directly from Google Drive links.** This is why you haven't seen a proper video thumbnail.
+2. **Run both backend and UI**
 
-For the best visual experience (a clickable image that previews the video), the recommended approach is to upload your demo to **YouTube**.
+   ```bash
+   python src/arxiv_mcp_server/ui/start_services.py
+   ```
 
----
+   * Backend: [http://localhost:8000](http://localhost:8000)
+   * UI: [http://localhost:8501](http://localhost:8501)
 
-### **Option 1: (Highly Recommended) If you upload your demo to YouTube**
+3. **Stop services**
+   Press `Ctrl+C` in the terminal to stop both backend and UI.
 
-This method provides a proper thumbnail and a smooth viewing experience directly within GitHub.
+## Project Structure
 
-1.  Upload your video to YouTube.
-2.  Get the video ID from its URL (e.g., for `https://www.youtube.com/watch?v=dQw4w9WgXcQ`, the ID is `dQw4w9WgXcQ`).
-3.  Use the following Markdown, replacing `YOUR_YOUTUBE_VIDEO_ID` with your actual video ID:
+```
+project-root/
+├── README.md
+├── requirements.txt
+├── pyproject.toml
+├── data/
+│   └── papers/
+├── src/
+│   └── arxiv_mcp_server/
+│       ├── __init__.py
+│       ├── __main__.py
+│       ├── config.py
+│       ├── server.py
+│       ├── types.py
+│       ├── models/
+│       │   └── history.py
+│       ├── prompts/
+│       │   ├── __init__.py
+│       │   ├── deep_research_analysis_prompt.py
+│       │   ├── handlers.py
+│       │   ├── prompt_manager.py
+│       │   └── prompts.py
+│       ├── resources/
+│       │   ├── __init__.py
+│       │   └── papers.py
+│       ├── services/
+│       │   ├── __init__.py
+│       │   ├── api.py
+│       │   ├── llm.py
+│       │   └── relevance.py
+│       ├── tools/
+│       │   ├── __init__.py
+│       │   ├── download.py
+│       │   ├── list_papers.py
+│       │   ├── read_paper.py
+│       │   └── search.py
+│       └── ui/
+│           ├── __init__.py
+│           ├── app.py
+│           ├── app_clean.py
+│           ├── config.py
+│           ├── modern_components.py
+│           ├── run_ui.py
+│           ├── start_services.py
+│           ├── STREAMLIT_HTML_SOLUTIONS.md
+│           ├── styles.py
+│           ├── data/
+│           │   ├── arxiv-logo.svg
+│           │   └── search_history.json
+│           └── services/
+│               ├── __init__.py
+│               ├── api.py
+│               └── llm.py
+└── arxiv_mcp_server.egg-info/
+    ├── dependency_links.txt
+    ├── entry_points.txt
+    ├── PKG-INFO
+    ├── requires.txt
+    ├── SOURCES.txt
+    └── top_level.txt
+```
 
-    ```markdown
-    [![Watch the Demo Video](https://img.youtube.com/vi/YOUR_YOUTUBE_VIDEO_ID/hqdefault.jpg)](https://www.youtube.com/watch?v=YOUR_YOUTUBE_VIDEO_ID)
-    ```
-    (Example with a placeholder YouTube ID for demonstration):
-    [![Watch the Demo Video](https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+## Demo Video
 
----
+[![Watch the demo](https://img.youtube.com/vi/zdRTSI6OW_Q/0.jpg)](https://www.youtube.com/watch?v=zdRTSI6OW_Q)
 
-### **Option 2: (Current) Using your Google Drive link**
+> **Note:** Make sure the video is publicly accessible on YouTube.
 
-Since a direct visual preview isn't possible, we'll use a clear, clickable **badge** that directs users to your Google Drive video. This is the most effective way to present a Google Drive video link in a visually appealing and unambiguous manner in a README.
+## Customization
 
-```markdown
-[![Watch Demo on Google Drive](https://img.shields.io/badge/Watch%20Demo-Google%20Drive-orange?style=for-the-badge&logo=google-drive)](https://drive.google.com/file/d/18LjlpyrIzt175p5UOAc_b3oD1BxTZja0/view?usp=sharing)
+* Add your own LLM API keys and configuration in `src/arxiv_mcp_server/config.py`.
+* Place downloaded papers in `data/papers/`.
+
+## License
+
+MIT License
+
+
