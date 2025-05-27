@@ -1,6 +1,3 @@
-Here is the full **Markdown code** you can copy and paste into your `README.md` file:
-
-````markdown
 # arxiv-mcp-server
 
 A unified platform for exploring, analyzing, and interacting with arXiv research papers using a modern web UI and backend server.
